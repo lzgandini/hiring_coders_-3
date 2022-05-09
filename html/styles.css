@@ -33,7 +33,7 @@ body {
 /*formatação de todo o cabeçalho*/
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 20px;
 }
@@ -51,6 +51,17 @@ header ul {
 /*formatação do navbar*/
 header ul li {
     padding: 5px;
+}
+
+/*suavizando transição da animação*/
+header ul li a {
+    transition: 0.3s;
+}
+
+/*adicionando animação quando o mouse sobrepõe*/
+header ul li a:hover{
+    font-size: 19px;
+    color: #1B2631;
 }
 
 /*alinhamento do container contendo as classes name, career, about e others*/
@@ -75,9 +86,40 @@ header ul li {
     color: #1B2631;
 }
 
+/*espaçamento da frase de apresentação*/
 .container .name p {
     padding-bottom: 50px;
 }
+
+/*
+/*animação da seta (blink é um nome escolhido. pode ser outro)
+#arrow {
+    font-size: 35px;
+    cursor: pointer;
+    animation: blink 1s steps(5, start) infinite;
+}
+
+/*determina a ação da animação (necessário para que a animação funcione)
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+/*controla a rotação da seta ao "descer"
+#animation {
+    transition: 0.3s;
+}
+
+/*configura rotação ao clicar
+.rotate {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+
+.active {
+    display: block !important;
+}*/
 
 /*posicionamento do bloco carreira na horizontal conforme quantidade de divs*/
 .career {
@@ -92,8 +134,8 @@ header ul li {
 .career div {
     background-color: #F2F3F4;
     opacity: 0.9;
-    width: 230px;
-    height: 210px;
+    width: 280px;
+    height: 220px;
     padding: 15px;
 }
 
@@ -102,22 +144,23 @@ header ul li {
     padding: 20px;
 }
 
-/*definição de tamanho das imagens da classe techs*/
-.techs img {
-    width: 20px;
-    height: 20px;
-}
-
 .techs ul {
     font-size: 18px;
 }
 
-.github button, .curriculo button {
-    border: 0;
-    background-color: white;
-    font-style: bold;
+/*estilização do botão sem sobreposição do mouse*/
+button {
     padding: 5px 7px;
-    font-size: 15px;
+    transition: 0.3s;
+    border-radius: 0px;
+    border: 1px solid #D2B4DE;
+}
+
+/*estilização do botão quando o mouse sobrepõe*/
+button:hover {
+    background-color: #D2B4DE;
+    border: #D2B4DE;
+    font-size: 14px;
 }
 
 /*posicionamento e espaçamento do campo Sobre*/
@@ -136,7 +179,8 @@ header ul li {
 
 /*espaçamento geral do campo outros projetos*/
 .others {
-    padding: 25px;
+    padding-top: 25px;
+    padding-bottom: 75px;
 }
 
 /*definição de tamanho de fonte para o título de outros projetos*/
@@ -157,6 +201,11 @@ header ul li {
 .projects img {
     width: 60px;
     height: 60px;
+}
+
+.projects img a:hover{
+    width: 130px;
+    height: 130px;
 }
 
 /*
@@ -180,8 +229,11 @@ header ul li {
 
 /*detalhamento de borda e estilização do rodapé*/
 footer {
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    text-align: center;
     box-shadow: 1px 1px 10px 1px #F8F9F9;
     font-size: 15px;
-    text-align: center;
     padding: 15px;
 }

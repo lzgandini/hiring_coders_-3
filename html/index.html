@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Falta add aqui o CDN da seta do font awesome -->
+    <script src="https://kit.fontawesome.com/2537e44516.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Luiza Gandini</title>
 </head>
@@ -33,10 +33,13 @@
                 <p>"programo poesia em computadores e corações"</p>
             </div>
 
-            <!--<div id="arrow">
-                <i class="fa-solid fa-angle-down"></i>
-            </div>-->
+            <!--
+            <div onclick="displayAbout()" id="arrow">
+                <i id="animation"  class="fa-solid fa-angle-down"></i>
+            </div>
 
+            <div style="display: none" class="hidden"> -->
+            
             <div class="career">
                 <div class="techs">
                     <h4>Tecnologias Favoritas</h4>
@@ -56,7 +59,8 @@
                         <a target="_blank" href="https://github.com/lzgandini">ver github</a>
                     </button>                   
                 </div>
-
+                
+                <!--
                 <div class="curriculo">
                     <h4>Currículo</h4>
                     <p>Quer saber mais sobre minhas experiências profissionais?</p>
@@ -64,15 +68,15 @@
                     <button>
                         <a target="_blank" href="https://github.com/lzgandini">baixar currículo</a>
                     </button>
-                </div>
+                </div>  -->
             </div>
 
             <div id="about">
                 <p>Moro no Rio de Janeiro/RJ, nasci em 1991 e sou mãe do humano Marvin.<br>
-                    Faço trabalho voluntário como revisora na Revista Mães que Escrevem<br>e amo produzir conteúdo para 
-                    internet.<br>Também sou Administradora, poeta e amante da vida!</p>
+                        Faço trabalho voluntário como revisora na Revista Mães que Escrevem<br>e amo produzir conteúdo para 
+                        internet.<br>Também sou Administradora, poeta e amante da vida!</p>
             </div>
-                   
+                    
             <div class="others">
                 <p>outros projetos</p>
 
@@ -97,8 +101,7 @@
                         <div>
                             <a target="_blank" 
                             href="https://open.spotify.com/episode/09J73wb6e8UslUkcv4x9BJ?si=r2mMAyJpRiGAgMOUW_FGUQ&dl_branch=1">podcast</a>
-                        </div>
-                        
+                        </div>                           
                     </li>
 
                     <li>
@@ -112,6 +115,7 @@
                     </li>
                 </ul> 
             </div>
+            <!--</div>-->
 
             <!--<div class="form">
                 <div>
@@ -152,11 +156,20 @@
             -->
             
         </section>
-
     </main>
+
+    <!--<script>
+        function displayAbout() {
+            var arrow = document.getElementById('animation');
+            arrow.classList.toggle('rotate');
+            var display = document.getElementById('hidden');
+            display.classList.toggle('active');
+        }
+    </script> -->
 
     <footer class="rodape">
         <p>Luiza Gandini &copy 2022</p>
     </footer>
+
 </body>
 </html>
